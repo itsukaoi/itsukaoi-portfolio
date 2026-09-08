@@ -1,17 +1,18 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Window from "../components/Window.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Itsukaoi Portfolio</title>
-	</head>
-	<body>
-		<h1>Itsukaoi Portfolio</h1>
-	</body>
-</html>
+<Layout>
+	<div class="page">
+		<span class="star star--one">✦</span>
+		<span class="star star--two">✦</span>
+		<span class="star star--three">✦</span>
+
+		<Window>
+			<div class="placeholder">
+				Base layout
+			</div>
+		</Window>
+	</div>
+</Layout>
