@@ -1,8 +1,23 @@
+---
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import type { Language } from "../i18n/translations";
+
+interface Props {
+    lang?: Language;
+}
+
+const { lang = "en" } = Astro.props;
+---
+
 <div class="window">
     <header class="window__bar">
         <div class="window__identity">
             <span class="window__mark">✦</span>
             <span class="window__title">itsukaoi.dev</span>
+        </div>
+
+        <div class="window__actions">
+            <LanguageSwitcher lang={lang} />
         </div>
 
         <div class="window__controls" aria-hidden="true">
