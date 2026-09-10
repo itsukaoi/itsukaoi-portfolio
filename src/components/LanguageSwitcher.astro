@@ -1,0 +1,30 @@
+---
+import type { Language } from "../i18n/translations"
+
+interface Props {
+  lang: Language
+}
+
+const { lang } = Astro.props
+const label = lang==="es"? "Selector de idioma" : "Language selector"
+---
+
+<nav class="language-switcher" aria-label={label}>
+  <a
+    href="/"
+    class:list={{ active: lang === "en" }}
+    lang="en"
+  >
+    EN
+  </a>
+
+  <span aria-hidden="true">/</span>
+
+  <a
+    href="/es"
+    class:list={{ active: lang === "es" }}
+    lang="es"
+  >
+    ES
+  </a>
+</nav>

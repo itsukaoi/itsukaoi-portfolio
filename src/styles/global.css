@@ -109,6 +109,37 @@ a {
     font-size: 0.8rem;
 }
 
+.window__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+}
+
+.language-switcher a {
+    transition: color 150ms ease;
+}
+
+.language-switcher a:hover {
+    color: var(--color-primary);
+}
+
+.language-switcher a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
 .window__controls {
     display: flex;
     align-items: center;

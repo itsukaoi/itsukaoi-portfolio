@@ -5,18 +5,18 @@ import Hero from "../components/Hero.astro";
 
 import { translations } from "../i18n/translations";
 
-const lang = "en";
+const lang = "es";
 const t = translations[lang];
 ---
 
 <Layout lang={lang} title={t.meta.title} description={t.meta.description}>
-	<div class="page">
-		<span class="star star--one">✦</span>
-		<span class="star star--two">✦</span>
-		<span class="star star--three">✦</span>
+    <div class="page">
+        <span class="star star--one">✦</span>
+        <span class="star star--two">✦</span>
+        <span class="star star--three">✦</span>
 
-		<Window lang={lang}>
-			<Hero lang={lang} />
-		</Window>
-	</div>
+        <Window lang={lang}>
+            <Hero lang={lang} />
+        </Window>
+    </div>
 </Layout>

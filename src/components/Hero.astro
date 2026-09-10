@@ -1,35 +1,47 @@
+---
+import { translations, type Language } from "../i18n/translations";
+
+interface Props {
+    lang?: Language;
+}
+
+const { lang = "en" } = Astro.props;
+
+const t = translations[lang].hero;
+---
+
 <section class="hero" id="home">
-  <span class="hero__eyebrow">01 — INTRO</span>
+    <span class="hero__eyebrow">{t.eyebrow}</span>
 
-  <div class="hero__content">
-    <div class="hero__identity">
-      <h1>Luka Cáceres</h1>
-      <span class="hero__alias">@itsukaoi</span>
+    <div class="hero__content">
+        <div class="hero__identity">
+            <h1>Luka Cáceres</h1>
+            <span class="hero__alias">@itsukaoi</span>
+        </div>
+
+        <p class="hero__role">{t.role}</p>
+
+        <p class="hero__description">
+            {t.description}
+        </p>
+
+        <div class="hero__actions">
+            <a class="hero__button hero__button--primary" href="#projects">
+                {t.projects}
+                <span aria-hidden="true">↘</span>
+            </a>
+
+            <a class="hero__button hero__button--secondary" href="#contact">
+                {t.contact}
+                <span aria-hidden="true">↗</span>
+            </a>
+        </div>
     </div>
 
-    <p class="hero__role">Full Stack Developer</p>
-
-    <p class="hero__description">
-      I build web applications and software focused on solving real-world needs.
-    </p>
-
-    <div class="hero__actions">
-      <a class="hero__button hero__button--primary" href="#projects">
-        View projects
-        <span aria-hidden="true">↘</span>
-      </a>
-
-      <a class="hero__button hero__button--secondary" href="#contact">
-        Get in touch
-        <span aria-hidden="true">↗</span>
-      </a>
+    <div class="hero__techs" aria-label={t.technologiesLabel}>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>Astro</span>
+        <span>MongoDB</span>
     </div>
-  </div>
-
-  <div class="hero__techs" aria-label="Main technologies">
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Astro</span>
-    <span>MongoDB</span>
-  </div>
 </section>
