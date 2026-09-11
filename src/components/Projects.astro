@@ -1,0 +1,71 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+import { translations, type Language } from "../i18n/translations";
+
+interface Props {
+    lang?: Language;
+}
+
+const { lang = "en" } = Astro.props;
+
+const t = translations[lang].projects;
+---
+
+<section class="projects" id="projects">
+    <header class="projects__header">
+        <span class="projects__eyebrow">
+            {t.eyebrow}
+        </span>
+
+        <div class="projects__heading">
+            <h2>{t.title}</h2>
+
+            <p>{t.description}</p>
+        </div>
+    </header>
+
+    <div class="projects__list">
+        <ProjectItem
+            title={t.items.ecommerce.title}
+            description={t.items.ecommerce.description}
+            image="/images/ecommerce.webp"
+            imageAlt={t.items.ecommerce.imageAlt}
+            technologies={["React", "Node.js", "Express", "MongoDB"]}
+            linkLabel={t.viewProject}
+            href="https://doblecincostore.vercel.app/"
+            featured
+        />
+
+        <ProjectItem
+            title={t.items.inventory.title}
+            description={t.items.inventory.description}
+            image="/images/CRM.webp"
+            imageAlt={t.items.inventory.imageAlt}
+            technologies={["React", "Node.js", "Express", "MongoDB"]}
+            linkLabel={t.viewProject}
+            status={t.internalTool}
+        />
+
+        <ProjectItem
+            title={t.items.converter.title}
+            description={t.items.converter.description}
+            image="/images/converter.webp"
+            imageAlt={t.items.converter.imageAlt}
+            technologies={["React", "Node.js"]}
+            linkLabel={t.viewProject}
+            href="https://convertilo.vercel.app/"
+            githubHref="https://github.com/itsukaoi/Convertilo"
+        />
+
+        <ProjectItem
+            title={t.items.landing.title}
+            description={t.items.landing.description}
+            image="/images/landing.webp"
+            imageAlt={t.items.landing.imageAlt}
+            technologies={["React", "Vite", "CSS"]}
+            linkLabel={t.viewProject}
+            href="https://ltgym.vercel.app/"
+            githubHref="https://github.com/itsukaoi/ltgym"
+        />
+    </div>
+</section>

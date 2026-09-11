@@ -1,0 +1,67 @@
+---
+import { translations, type Language } from "../i18n/translations";
+
+interface Props {
+    lang?: Language;
+}
+
+const { lang = "en" } = Astro.props;
+const t = translations[lang].contact;
+---
+
+<section class="contact" id="contact">
+    <span class="contact__eyebrow">{t.eyebrow}</span>
+
+    <div class="contact__layout">
+        <div class="contact__intro">
+            <div class="contact__availability">
+                <span class="contact__availability-dot"></span>
+                <span>{t.availability}</span>
+            </div>
+
+            <h2>{t.title}</h2>
+
+            <p>{t.description}</p>
+        </div>
+
+        <div class="contact__details">
+            <div class="contact__group">
+                <span class="contact__label">{t.emailLabel}</span>
+
+                <a class="contact__email" href="mailto:itsukaoi.dev@gmail.com">
+                    itsukaoi.dev@gmail.com
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="contact__group">
+                <span class="contact__label">{t.socialLabel}</span>
+
+                <div class="contact__links">
+                    <a
+                        href="https://www.linkedin.com/in/luka-caceres-ba2268436/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        href="https://github.com/itsukaoi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="contact__footer">
+        <span>© {new Date().getFullYear()} Luka Cáceres</span>
+        <span>itsukaoi.dev</span>
+    </footer>
+</section>

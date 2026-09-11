@@ -1,0 +1,120 @@
+---
+import { translations, type Language } from "../i18n/translations";
+
+interface Props {
+    lang?: Language;
+}
+
+const { lang = "en" } = Astro.props;
+const t = translations[lang].about;
+
+const technologies = {
+    core: [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "HTML",
+        "CSS",
+    ],
+
+    additional: [
+        "Git",
+        "Linux",
+        "Astro",
+        "PHP",
+        "WordPress",
+        "C#",
+        ".NET",
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Tailwind CSS",
+        "Bootstrap",
+    ],
+
+    exploring: ["Docker", "Kubernetes"],
+};
+---
+
+<section class="about" id="about">
+    <span class="about__eyebrow">{t.eyebrow}</span>
+
+    <div class="about__layout">
+        <div class="about__intro">
+            <h2>{t.title}</h2>
+
+            <p class="about__lead">
+                {t.description}
+            </p>
+
+            <p class="about__body">
+                {t.body}
+            </p>
+        </div>
+
+        <div class="about__details">
+            <div class="about__block">
+                <h3>{t.educationTitle}</h3>
+
+                <div class="about__education">
+                    {
+                        t.education.map((item) => (
+                            <div class="about__education-item">
+                                <span>{item.title}</span>
+                                <small>{item.status}</small>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div class="about__block about__technologies">
+                <h3>{t.technologies.title}</h3>
+
+                <div class="about__technology-group">
+                    <span class="about__technology-label">
+                        {t.technologies.core.title}
+                    </span>
+
+                    <div class="about__stack">
+                        {
+                            technologies.core.map((technology) => (
+                                <span>{technology}</span>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div class="about__technology-group">
+                    <span class="about__technology-label">
+                        {t.technologies.additional.title}
+                    </span>
+
+                    <div class="about__stack">
+                        {
+                            technologies.additional.map((technology) => (
+                                <span>{technology}</span>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div class="about__technology-group">
+                    <span class="about__technology-label">
+                        {t.technologies.exploring.title}
+                    </span>
+
+                    <div class="about__stack about__stack--muted">
+                        {
+                            technologies.exploring.map((technology) => (
+                                <span>{technology}</span>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
