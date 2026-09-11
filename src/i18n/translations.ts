@@ -92,6 +92,17 @@ export const translations = {
                 },
             },
         },
+
+        contact: {
+            eyebrow: "04 — CONTACT",
+            title: "Let's work together.",
+            description:
+                "Have a project in mind or need help building a web application? Feel free to reach out and tell me about it.",
+            emailLabel: "Email",
+            socialLabel: "Elsewhere",
+            availability: "Available for freelance projects",
+            emailAction: "Send an email",
+        },
     },
 
     es: {
@@ -186,6 +197,17 @@ export const translations = {
                     title: "Actualmente aprendiendo",
                 },
             },
+        },
+
+        contact: {
+            eyebrow: "04 — CONTACTO",
+            title: "Trabajemos juntos.",
+            description:
+                "¿Tenés un proyecto en mente o necesitás ayuda para desarrollar una aplicación web? Podés contactarme y contarme sobre tu idea.",
+            emailLabel: "Email",
+            socialLabel: "También en",
+            availability: "Disponible para proyectos freelance",
+            emailAction: "Enviar un email",
         },
     },
 } as const
