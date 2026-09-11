@@ -57,6 +57,41 @@ export const translations = {
                 },
             },
         },
+
+        about: {
+            eyebrow: "03 — ABOUT",
+            title: "About me",
+            description:
+                "I’m a Full Stack Developer focused on building practical software to resolve real-life problems",
+            body:
+                "I’ve been building software since 2022, working mainly with JavaScript and MERN stack, but I've also worked with PHP, Python and C#. I like to learn and build new things outside of web applications.",
+            educationTitle: "Education",
+            education: [
+                {
+                    title: "University Programmer - FACET UNT",
+                    status: "Currently pursuing",
+                },
+                {
+                    title: "Full Stack Development Course - Rolling Code",
+                    status: "Completed",
+                },
+            ],
+            technologies: {
+                title: "Technologies",
+
+                core: {
+                    title: "Core stack",
+                },
+
+                additional: {
+                    title: "Also worked with",
+                },
+
+                exploring: {
+                    title: "Currently exploring",
+                },
+            },
+        },
     },
 
     es: {
@@ -92,7 +127,7 @@ export const translations = {
                     description:
                         "Una tienda online para un negocio de indumentaria con catálogo de productos, carrito y checkout, gestión de pedidos, autenticación y un panel de administración para productos y stock.",
                     imageAlt: "Interfaz de la plataforma ecommerce",
-                    
+
                 },
 
                 inventory: {
@@ -114,6 +149,41 @@ export const translations = {
                     description:
                         "Un sitio promocional responsive diseñado con una jerarquía clara de contenido, consistencia visual y buena experiencia móvil.",
                     imageAlt: "Interfaz de la landing page responsive",
+                },
+            },
+        },
+
+        about: {
+            eyebrow: "03 — SOBRE MÍ",
+            title: "Sobre mí",
+            description:
+                "Soy un desarrollador Full Stack enfocado en crear software práctico para solucionar problemas de la vida real.",
+            body:
+                "Desarrollo software desde 2022, trabajando principalmente con JavaScript y el stack MERN, sin embargo, tengo conocimientos en otras tecnologías como PHP, Python o C#. Me gusta adquirir conocimiento nuevos y desarrollar cosas nuevas además de aplicaciones web.",
+            educationTitle: "Formación",
+            education: [
+                {
+                    title: "Programador Universitario - FACET UNT",
+                    status: "En curso",
+                },
+                {
+                    title: "Curso de Desarrollo Full Stack - Rolling Code",
+                    status: "Completado",
+                },
+            ],
+            technologies: {
+                title: "Tecnologías",
+
+                core: {
+                    title: "Stack principal",
+                },
+
+                additional: {
+                    title: "También he trabajado con",
+                },
+
+                exploring: {
+                    title: "Actualmente aprendiendo",
                 },
             },
         },
