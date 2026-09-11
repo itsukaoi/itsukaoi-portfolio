@@ -47,6 +47,11 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
 .page {
     position: relative;
 
@@ -1073,5 +1078,20 @@ a {
         align-items: end;
 
         gap: 5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }

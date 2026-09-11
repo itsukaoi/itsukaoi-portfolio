@@ -3,14 +3,14 @@ export const translations = {
         meta: {
             title: "Luka Cáceres | Full Stack Developer",
             description:
-                "Portfolio of Luka Cáceres, Full Stack Developer focused on web applications and software.",
+                "Full Stack Developer building web applications and software for businesses, focused on practical solutions and clean user experiences.",
         },
 
         hero: {
             eyebrow: "01 — INTRO",
             role: "Full Stack Developer",
             description:
-                "I build web applications and software focused on solving real-world needs.",
+                "I build web applications and software for businesses, focused on solving real-world needs with practical solutions and clean user experiences.",
             projects: "View projects",
             contact: "Get in touch",
             technologiesLabel: "Main technologies",
@@ -23,7 +23,7 @@ export const translations = {
             description:
                 "A selection of applications and tools built around practical needs, business workflows, and real-world use cases.",
 
-            viewProject: "View project",
+            viewProject: "View site",
 
             internalTool: "Internal tool",
 
@@ -31,14 +31,14 @@ export const translations = {
                 ecommerce: {
                     title: "Ecommerce Platform",
                     description:
-                        "An online store for a clothing business with product browsing, cart and checkout flows, order management, authentication, and an administration area for managing products and stock.",
+                        "An online store for a clothing business with product browsing, cart and checkout flows, order management, authentication, and an administration area for managing products and stock. Developed for a real client.",
                     imageAlt: "Ecommerce platform interface",
                 },
 
                 inventory: {
                     title: "Inventory Management System",
                     description:
-                        "An internal management platform for inventory entries, in-person and online sales, product management, stock adjustments, and complete inventory movement tracking.",
+                        "An internal management platform for inventory entries, in-person and online sales, product management, stock adjustments, and complete inventory movement tracking. Developed for a real client.",
                     imageAlt: "Inventory management system interface",
                 },
 
@@ -52,7 +52,7 @@ export const translations = {
                 landing: {
                     title: "Responsive Landing Page",
                     description:
-                        "A responsive marketing website built around clear content hierarchy, consistent visual design, and mobile usability.",
+                        "A responsive marketing website built around clear content hierarchy, consistent visual design, and mobile usability. Built as a demo.",
                     imageAlt: "Responsive landing page interface",
                 },
             },
@@ -109,14 +109,14 @@ export const translations = {
         meta: {
             title: "Luka Cáceres | Desarrollador Full Stack",
             description:
-                "Portfolio de Luka Cáceres, desarrollador Full Stack enfocado en aplicaciones web y software.",
+                "Desarrollador Full Stack enfocado en crear aplicaciones web y software para negocios, con soluciones prácticas y experiencias de usuario claras.",
         },
 
         hero: {
             eyebrow: "01 — INTRO",
             role: "Desarrollador Full Stack",
             description:
-                "Desarrollo aplicaciones web y software enfocados en resolver necesidades reales.",
+                "Desarrollo aplicaciones web y software enfocados en resolver necesidades reales de forma práctica y clara para los usuarios.",
             projects: "Ver proyectos",
             contact: "Contactarme",
             technologiesLabel: "Tecnologías principales",
@@ -136,7 +136,7 @@ export const translations = {
                 ecommerce: {
                     title: "Plataforma Ecommerce",
                     description:
-                        "Una tienda online para un negocio de indumentaria con catálogo de productos, carrito y checkout, gestión de pedidos, autenticación y un panel de administración para productos y stock.",
+                        "Una tienda online para un negocio de indumentaria con catálogo de productos, carrito y checkout, gestión de pedidos, autenticación y un panel de administración para productos y stock. Desarrollado para un cliente real.",
                     imageAlt: "Interfaz de la plataforma ecommerce",
 
                 },
@@ -144,7 +144,7 @@ export const translations = {
                 inventory: {
                     title: "Sistema de Gestión de Inventario",
                     description:
-                        "Una plataforma interna para gestionar ingresos de inventario, ventas presenciales y online, productos, ajustes de stock y el historial completo de movimientos.",
+                        "Una plataforma interna para gestionar ingresos de inventario, ventas presenciales y online, productos, ajustes de stock y el historial completo de movimientos. Desarrollado para un cliente real.",
                     imageAlt: "Interfaz del sistema de gestión de inventario",
                 },
 
@@ -158,7 +158,7 @@ export const translations = {
                 landing: {
                     title: "Landing Page Responsive",
                     description:
-                        "Un sitio promocional responsive diseñado con una jerarquía clara de contenido, consistencia visual y buena experiencia móvil.",
+                        "Un sitio promocional responsive diseñado con una jerarquía clara de contenido, consistencia visual y buena experiencia móvil. Desarrollado exclusivamente como demo.",
                     imageAlt: "Interfaz de la landing page responsive",
                 },
             },
