@@ -1,0 +1,103 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    technologies: string[];
+    linkLabel: string;
+    href?: string;
+    githubHref?: string;
+    githubLabel?: string;
+    status?: string;
+    featured?: boolean;
+}
+
+const {
+    title,
+    description,
+    image,
+    imageAlt,
+    technologies,
+    linkLabel,
+    href,
+    githubHref,
+    githubLabel = "GitHub",
+    status,
+    featured = false,
+} = Astro.props;
+---
+
+<article class:list={["project", { "project--featured": featured }]}>
+    <div class="project__visual">
+        <div class="project-window">
+            <div class="project-window__bar">
+                <div class="project-window__brand">
+                    <span>✦</span>
+                    <span>{title}</span>
+                </div>
+
+                <div class="project-window__controls" aria-hidden="true">
+                    <span>—</span>
+                    <span>□</span>
+                    <span>×</span>
+                </div>
+            </div>
+
+            <div class="project-window__content">
+                <img
+                    class="project__image"
+                    src={image}
+                    alt={imageAlt}
+                    loading="lazy"
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="project__content">
+        <div class="project__heading">
+            <h3 class="project__title">{title}</h3>
+
+            {status && <span class="project__status">{status}</span>}
+        </div>
+
+        <p class="project__description">
+            {description}
+        </p>
+
+        <div class="project__techs">
+            {technologies.map((technology) => <span>{technology}</span>)}
+        </div>
+
+        {
+            (href || githubHref) && (
+                <div class="project__links">
+                    {href && (
+                        <a
+                            class="project__link"
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {linkLabel}
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    )}
+
+                    {githubHref && (
+                        <a
+                            class="project__link project__link--secondary"
+                            href={githubHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {githubLabel}
+                            <span aria-hidden="true">↗</span>
+                        </a>
+                    )}
+                </div>
+            )
+        }
+    </div>
+</article>
